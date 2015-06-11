@@ -1,0 +1,11 @@
+<p>
+  <strong>Tag:</strong>
+  <%= tag.name %>
+</p>
+
+
+<p>
+  <%= link_to 'Destroy Tag', [tag.article, tag],
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+</p>

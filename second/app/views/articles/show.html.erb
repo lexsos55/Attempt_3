@@ -1,0 +1,24 @@
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @article.text %>
+</p>
+
+<p>
+  <b>Tag:</b>
+  <%join_tags(@article)%>
+</p>
+
+<h2>Comments</h2>
+<%= render @article.comments %>
+<h2>Tags</h2>
+<%= render @article.tags %>
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<%= link_to 'Edit Article', edit_article_path(@article) %> |
+<%= link_to 'Back to Articles', articles_path %>
